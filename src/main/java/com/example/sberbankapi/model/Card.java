@@ -8,7 +8,7 @@ public class Card {
     private String number;
     private int cvc;
     private boolean active;
-    private Date date;
+    private Date dateCreated;
     private int id_account;
 
     public Card(int id, String number, int cvc, boolean active, Date date, int id_account) {
@@ -17,7 +17,7 @@ public class Card {
         this.cvc = cvc;
         this.active = active;
         this.id_account = id_account;
-        this.date = date;
+        this.dateCreated = date;
     }
 
     public Card(String number, int cvc, boolean active, int id_account) {
@@ -69,11 +69,11 @@ public class Card {
     }
 
     public Date getDate() {
-        return date;
+        return dateCreated;
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this.dateCreated = date;
     }
 
     @Override
@@ -81,12 +81,12 @@ public class Card {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Card card = (Card) o;
-        return id == card.id && cvc == card.cvc && active == card.active && id_account == card.id_account && Objects.equals(number, card.number)&& Objects.equals(date, card.date);
+        return id == card.id && cvc == card.cvc && active == card.active && id_account == card.id_account && Objects.equals(number, card.number)&& Objects.equals(dateCreated, card.dateCreated);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, number, cvc, active, date,id_account);
+        return Objects.hash(id, number, cvc, active, dateCreated,id_account);
     }
 
     @Override
@@ -97,7 +97,7 @@ public class Card {
                 ", cvc=" + cvc +
                 ", active=" + active +
                 ", id_account=" + id_account +
-                ",date=" + date +
+                ",date=" + dateCreated +
                 '}';
     }
 }

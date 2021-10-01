@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Objects;
 
 public class AccountDto {
+
     private int id;
     private String number;
     private double balance;

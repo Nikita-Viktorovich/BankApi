@@ -6,13 +6,12 @@ public class Person {
     private int id;
     private String name;
     private String surname;
-    private String role;
+    private Role role;
 
     public Person() {
-
     }
 
-    public Person(int id, String name, String surname, String role) {
+    public Person(int id, String name, String surname, Role role) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -43,11 +42,11 @@ public class Person {
         this.surname = surname;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 

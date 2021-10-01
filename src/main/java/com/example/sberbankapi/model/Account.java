@@ -5,19 +5,21 @@ import java.util.Objects;
 
 public class Account {
     private int id;
+    private Rights rights;
     private String number;
     private double balance;
     private Date dateCreated;
     private boolean active;
     private int id_person;
 
-    public Account(int id, String number, double balance, Date dateCreated, boolean active, int id_person) {
+    public Account(int id, String number, double balance, Date dateCreated, boolean active, int id_person, Rights rights) {
         this.id = id;
         this.number = number;
         this.balance = balance;
         this.dateCreated = dateCreated;
         this.active = active;
         this.id_person = id_person;
+        this.rights = rights;
     }
 
     public Account(){}
@@ -68,6 +70,14 @@ public class Account {
 
     public void setId_person(int id_person) {
         this.id_person = id_person;
+    }
+
+    public Rights getRights() {
+        return rights;
+    }
+
+    public void setRights(Rights rights) {
+        this.rights = rights;
     }
 
     @Override

@@ -2,11 +2,19 @@ package com.example.sberbankapi.exception;
 
 public class ExceptionApi extends Exception {
 
-    public ExceptionApi(Exception e){
-      super(e.getMessage());
+    private String reason;
+    private int number;
+
+    public ExceptionApi(String reason, int number){
+      super(reason);
+      this.number=number;
     }
 
     public String getMessage(){
-        return "";
+        return reason;
+    }
+
+    public int getNumber() {
+        return number;
     }
 }
